@@ -17,10 +17,11 @@
     "test:unit": "vitest --environment jsdom",
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^3.2.31"
   },
   "devDependencies": {
+    "vue": "^3.2.31",
     "@types/jsdom": "^16.2.14",
     "@types/node": "^16.11.26",
     "@vue/tsconfig": "^0.1.3",

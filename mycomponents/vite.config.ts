@@ -17,7 +17,8 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
       name: 'MyLib',
-      fileName: (format) => `my-lib.${format}.js`
+      formats: ["es", "umd"],
+      fileName: (format) => `my-lib.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

@@ -10,11 +10,13 @@ describe("App testing", () =>
     {
         const renderResult = mount(App)
 
+        console.log("First")
         console.log(renderResult.html())
 
         const button = renderResult.find(".buttonToEnable");
         await button.trigger("click");
 
+        console.log("Second")
         console.log(renderResult.html());
     })
 })

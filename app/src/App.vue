@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <h1><b>Mode</b> {{ envMode }}</h1>
+
     <button class="buttonToEnable" title="enableButton" @click="handleClick">Click</button>
     <MyButton class="testbuttonclass" title="testbutton" :showmeTest="enableMeText"></MyButton>
   </div>
@@ -26,6 +28,7 @@ export default defineComponent({
   setup()
   {
     const enableMeText = ref("Hello");
+    const envMode = import.meta.env.MODE;
 
     function handleClick()
     {
@@ -35,6 +38,7 @@ export default defineComponent({
     return {
       enableMeText,
       handleClick,
+      envMode
     }
   },
 })
